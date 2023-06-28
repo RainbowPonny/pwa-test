@@ -2,6 +2,7 @@ const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
   pwa: {
+    name: 'Payouts PWA',
     prefer_related_applications: true,
     manifestOptions: {
       share_target: {
