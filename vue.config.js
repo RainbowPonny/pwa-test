@@ -9,9 +9,14 @@ module.exports = defineConfig({
         method: 'POST',
         enctype: 'multipart/form-data',
         params: {
-          title: 'title',
-          text: 'text',
-          url: 'url'
+          files: [{
+            name: 'media',
+            accept: [
+              'audio/*',
+              'image/*',
+              'video/*'
+            ]
+          }]
         }
       }
     }
