@@ -1,4 +1,19 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-  transpileDependencies: true
+  transpileDependencies: true,
+  pwa: {
+    prefer_related_applications: true,
+    manifestOptions: {
+      share_target: {
+        action: '/share',
+        method: 'POST',
+        enctype: 'multipart/form-data',
+        params: {
+          title: 'title',
+          text: 'text',
+          url: 'url'
+        }
+      }
+    }
+  }
 })
